@@ -27,17 +27,65 @@ input[type="text"] {
 .output {
     margin-top: 20px;
     font-size: 18px;
-    text-align: left;
-    max-width: 300px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.output > span {
-    display: block;
-    margin-top: 5px;
+.output-table {
+    border-collapse: collapse;
+    border: none;
+    min-width: 100%;
+    table-layout: auto;
+}
+
+.output-table td {
+    padding: 5px 15px 5px 0;
+    text-align: left;
+    border: none;
+    white-space: nowrap;
+}
+
+.letter-col {
+    font-weight: bold;
+    padding-right: 15px;
+    padding-left: 0;
+    width: 1%;
+}
+
+.as-in-col {
+    padding-right: 15px;
+    width: 1%;
+}
+
+.word-col {
+    padding-left: 0;
 }
 
 .as-in {
     color: #888;
+}
+
+.language-switcher {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.flag {
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.flag:hover {
+    opacity: 0.8;
+}
+
+.flag.active {
+    opacity: 1;
 }
